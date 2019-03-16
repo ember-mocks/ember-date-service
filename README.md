@@ -1,37 +1,29 @@
-ember-date-service
-==============================================================================
+# ember-date-service
 
-[Short description of the addon.]
+A bare-bones addon that provides a `Date` service with a minimal API.
 
+Often in Ember applications we need to utilize `Date.now()` to retrieve and use
+dates.
 
-Compatibility
-------------------------------------------------------------------------------
+## Compatibility
 
-* Ember.js v2.18 or above
-* Ember CLI v2.13 or above
+- Ember.js v2.18 or above
+- Ember CLI v2.13 or above
 
-
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install ember-date-service
 ```
 
-
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 [Longer description of how to use the addon in apps.]
 
-
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 See the [Contributing](CONTRIBUTING.md) guide for details.
 
-
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
