@@ -1,7 +1,7 @@
 import { module, test } from 'qunit';
 import { FakeDateService } from 'ember-date-service/test-support';
 
-module('Unit | Service | date', function(hooks) {
+module('Unit | Service | fake date', function(hooks) {
   hooks.beforeEach(function() {
     this.fakeService = FakeDateService.create();
   });

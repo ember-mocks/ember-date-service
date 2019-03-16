@@ -1,5 +1,11 @@
 import DateService from 'ember-date-service/services/date';
 
+/**
+ * @class FakeDateService
+ *
+ * Extends the provided internal DateService, allowing you to override
+ * Date.now() and Date.UTC() without modifying the native Date object.
+ */
 export default DateService.extend({
   init() {
     this._super(...arguments);

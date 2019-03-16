@@ -1,12 +1,12 @@
 import FakeDateService from './date';
 
+/**
+ * Sets up the fake date service as a replacement for DateService for use in tests.
+ *
+ * @param {object} hooks QUnit hooks passed to setup function
+ */
 export default function setupFakeDateService(hooks) {
   hooks.beforeEach(function() {
-    this.__dateService = this.lookup('service:date');
-    this.register('service:date', FakeDateService);
-  });
-
-  hooks.afterEach(function() {
-    this.register('service:date', this.__dateService);
+    this.owner.register('service:date', FakeDateService);
   });
 }

@@ -18,11 +18,4 @@ module('Unit | Service | date', function(hooks) {
     assert.ok(date);
     assert.equal(date.toUTCString(), 'Sat, 23 Jan 1971 03:04:05 GMT');
   });
-
-  test('it returns a number from the parse method', function(assert) {
-    let millis = this.service.parse('Sat, 23 Jan 1971 03:04:05 GMT');
-
-    assert.equal(typeof millis, 'number');
-    assert.equal(millis, 33447845000);
-  });
 });
