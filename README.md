@@ -1,6 +1,6 @@
 # ember-date-service
 
-[![Build Status](https://travis-ci.org/scalvert/ember-date-service.svg?branch=master)](https://travis-ci.org/scalvert/ember-date-service)
+[![Build Status](https://travis-ci.com/scalvert/ember-date-service.svg?branch=master)](https://travis-ci.com/scalvert/ember-date-service)
 [![npm version](https://badge.fury.io/js/ember-date-service.svg)](https://badge.fury.io/js/ember-date-service)
 
 A bare-bones addon that provides a `Date` service with a minimal API.
