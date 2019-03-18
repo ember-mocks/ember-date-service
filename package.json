@@ -1,13 +1,13 @@
 {
   "name": "ember-date-service",
   "version": "0.1.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "An Ember addon that provides a Date service with a minimal API.",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": "https://github.com/scalvert/ember-date-service",
   "license": "MIT",
-  "author": "",
+  "author": "scalvert <steve.calvert@gmail.com>",
   "directories": {
     "doc": "doc",
     "test": "tests"
