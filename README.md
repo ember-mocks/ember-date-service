@@ -1,5 +1,8 @@
 # ember-date-service
 
+[![Build Status](https://travis-ci.com/scalvert/ember-date-service.svg?branch=master)](https://travis-ci.com/scalvert/ember-date-service)
+[![npm version](https://badge.fury.io/js/ember-date-service.svg)](https://badge.fury.io/js/ember-date-service)
+
 A bare-bones addon that provides a `Date` service with a minimal API.
 
 Often in Ember applications we need to utilize `Date.now()` to retrieve the current time. The functionality is provided by the `Date` object,
