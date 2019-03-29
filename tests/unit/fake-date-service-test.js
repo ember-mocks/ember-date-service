@@ -6,6 +6,12 @@ module('Unit | Service | fake date', function(hooks) {
     this.fakeService = FakeDateService.create();
   });
 
+  test('it has the static Date APIs', function(assert) {
+    assert.equal(typeof this.fakeService.now, 'function');
+    assert.equal(typeof this.fakeService.UTC, 'function');
+    assert.equal(typeof this.fakeService.parse, 'function');
+  });
+
   test('it returns a date from the now method', function(assert) {
     assert.ok(this.fakeService.now());
   });

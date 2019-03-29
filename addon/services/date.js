@@ -18,4 +18,8 @@ export default Service.extend({
   UTC(...args) {
     return new Date(Date.UTC(...args));
   },
+
+  parse(dateString) {
+    return Date.parse(dateString);
+  },
 });
