@@ -5,7 +5,7 @@ import FakeDateService from './date';
  *
  * @param {object} hooks QUnit hooks passed to setup function
  */
-export default function setupFakeDateService(hooks) {
+export default function setupFakeDateService(hooks = self) {
   hooks.beforeEach(function() {
     this.owner.register('service:date', FakeDateService);
   });
