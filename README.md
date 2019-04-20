@@ -50,11 +50,36 @@ In test code, `ember-date-service` provides a QUnit hooks setup function to repl
 
 ```js
 // tests/integration/show-date-test.js
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render } from '@ember/test-helpers';
+import hbs from 'htmlbars-inline-precompile';
+
 module('Integration | Component | show-date', function(hooks) {
   setupRenderingTest(hooks);
   setupFakeDateService(hooks);
 
   test('it renders', async function(assert) {
+    // ...
+  });
+});
+```
+
+For mocha, you can similarly invoke the `setupFakeDateService` function by omitting the `hooks` parameter.
+
+```js
+// tests/integration/show-date-test.js
+import { expect } from 'chai';
+import { describe, it } from 'mocha';
+import { setupRenderingTest } from 'ember-mocha';
+import { render } from '@ember/test-helpers';
+import hbs from 'htmlbars-inline-precompile';
+
+describe('Integration | Component | show-date', function() {
+  setupRenderingTest();
+  setupFakeDateService();
+
+  it('renders', async function() {
     // ...
   });
 });
