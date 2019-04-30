@@ -54,6 +54,7 @@ import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import { setupFakeDateService } from 'ember-date-service/test-support';
 
 module('Integration | Component | show-date', function(hooks) {
   setupRenderingTest(hooks);
@@ -74,6 +75,7 @@ import { describe, it } from 'mocha';
 import { setupRenderingTest } from 'ember-mocha';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
+import { setupFakeDateService } from 'ember-date-service/test-support';
 
 describe('Integration | Component | show-date', function() {
   setupRenderingTest();
