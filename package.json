@@ -1,6 +1,6 @@
 {
   "name": "ember-date-service",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "An Ember addon that provides a Date service with a minimal API.",
   "keywords": [
     "ember-addon"
