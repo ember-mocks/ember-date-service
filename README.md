@@ -1,6 +1,6 @@
 # ember-date-service
 
-[![Build Status](https://travis-ci.com/scalvert/ember-date-service.svg?branch=master)](https://travis-ci.com/scalvert/ember-date-service)
+![CI Build](https://github.com/scalvert/ember-date-service/workflows/CI%20Build/badge.svg)
 [![npm version](https://badge.fury.io/js/ember-date-service.svg)](https://badge.fury.io/js/ember-date-service)
 
 A bare-bones addon that provides a `Date` service with a minimal API.
@@ -31,7 +31,7 @@ You can use the `DateService` by injecting it into your class:
 
 ```js
 // components/show-date.js
-import { inject as service } from '@ember/service';
+import { inject as service } from "@ember/service";
 
 export default Component.extend({
   date: service(),
@@ -39,8 +39,8 @@ export default Component.extend({
   init() {
     this._super(...arguments);
 
-    this.set('currentDate', this.get('date').now());
-  },
+    this.set("currentDate", this.get("date").now());
+  }
 });
 ```
 
@@ -50,17 +50,17 @@ In test code, `ember-date-service` provides a QUnit hooks setup function to repl
 
 ```js
 // tests/integration/show-date-test.js
-import { module, test } from 'qunit';
-import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
+import { module, test } from "qunit";
+import { setupRenderingTest } from "ember-qunit";
+import { render } from "@ember/test-helpers";
+import hbs from "htmlbars-inline-precompile";
 import { setupFakeDateService } from 'ember-date-service/test-support';
 
-module('Integration | Component | show-date', function(hooks) {
+module("Integration | Component | show-date", function(hooks) {
   setupRenderingTest(hooks);
   setupFakeDateService(hooks);
 
-  test('it renders', async function(assert) {
+  test("it renders", async function(assert) {
     // ...
   });
 });
@@ -70,18 +70,18 @@ For mocha, you can similarly invoke the `setupFakeDateService` function by omitt
 
 ```js
 // tests/integration/show-date-test.js
-import { expect } from 'chai';
-import { describe, it } from 'mocha';
-import { setupRenderingTest } from 'ember-mocha';
-import { render } from '@ember/test-helpers';
-import hbs from 'htmlbars-inline-precompile';
+import { expect } from "chai";
+import { describe, it } from "mocha";
+import { setupRenderingTest } from "ember-mocha";
+import { render } from "@ember/test-helpers";
+import hbs from "htmlbars-inline-precompile";
 import { setupFakeDateService } from 'ember-date-service/test-support';
 
-describe('Integration | Component | show-date', function() {
+describe("Integration | Component | show-date", function() {
   setupRenderingTest();
   setupFakeDateService();
 
-  it('renders', async function() {
+  it("renders", async function() {
     // ...
   });
 });
@@ -91,11 +91,11 @@ To set a static value for `now`, use the `setNow` function. This function will e
 
 ```js
 // tests/integration/show-date-test.js
-module('Integration | Component | show-date', function(hooks) {
+module("Integration | Component | show-date", function(hooks) {
   setupRenderingTest(hooks);
   setupFakeDateService(hooks);
 
-  test('it generates the current date', async function(assert) {
+  test("it generates the current date", async function(assert) {
     assert.expect(1);
 
     await render(hbs`
@@ -107,10 +107,10 @@ module('Integration | Component | show-date', function(hooks) {
     assert.ok(this.element.textContent.trim().match(/\d/));
   });
 
-  test('it generates a specific date', async function(assert) {
+  test("it generates a specific date", async function(assert) {
     assert.expect(1);
 
-    let dateService = this.owner.lookup('service:date');
+    let dateService = this.owner.lookup("service:date");
     let now = Date.now();
 
     dateService.setNow(now);
@@ -130,14 +130,14 @@ To reset `now` to restore its behavior to the default `Date.now()` behavior, use
 
 ```js
 // tests/integration/show-date-test.js
-module('Integration | Component | show-date', function(hooks) {
+module("Integration | Component | show-date", function(hooks) {
   setupRenderingTest(hooks);
   setupFakeDateService(hooks);
 
-  test('it generates the current date', async function(assert) {
+  test("it generates the current date", async function(assert) {
     assert.expect(1);
 
-    let dateService = this.owner.lookup('service:date');
+    let dateService = this.owner.lookup("service:date");
     let now = Date.now();
 
     dateService.setNow(now);
