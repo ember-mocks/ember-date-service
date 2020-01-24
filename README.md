@@ -1,7 +1,10 @@
 # ember-date-service
 
 ![CI Build](https://github.com/scalvert/ember-date-service/workflows/CI%20Build/badge.svg)
+[![Ember Observer Score](https://emberobserver.com/badges/ember-date-service.svg)](https://emberobserver.com/addons/ember-date-service)
 [![npm version](https://badge.fury.io/js/ember-date-service.svg)](https://badge.fury.io/js/ember-date-service)
+[![Monthly Downloads from NPM](https://img.shields.io/npm/dm/ember-date-service.svg?style=flat-square)](https://www.npmjs.com/package/ember-date-service)
+[![Code Style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](#badge)
 
 A bare-bones addon that provides a `Date` service with a minimal API.
 
@@ -54,7 +57,7 @@ import { module, test } from "qunit";
 import { setupRenderingTest } from "ember-qunit";
 import { render } from "@ember/test-helpers";
 import hbs from "htmlbars-inline-precompile";
-import { setupFakeDateService } from 'ember-date-service/test-support';
+import { setupFakeDateService } from "ember-date-service/test-support";
 
 module("Integration | Component | show-date", function(hooks) {
   setupRenderingTest(hooks);
@@ -75,7 +78,7 @@ import { describe, it } from "mocha";
 import { setupRenderingTest } from "ember-mocha";
 import { render } from "@ember/test-helpers";
 import hbs from "htmlbars-inline-precompile";
-import { setupFakeDateService } from 'ember-date-service/test-support';
+import { setupFakeDateService } from "ember-date-service/test-support";
 
 describe("Integration | Component | show-date", function() {
   setupRenderingTest();
