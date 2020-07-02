@@ -23,6 +23,14 @@ module('Unit | Service | fake date', function(hooks) {
     assert.equal(this.fakeService.now(), now);
   });
 
+  test('it can set date to specific date via Date object', function(assert) {
+    let date = new Date();
+    let now = this.fakeService.setNow(date);
+
+    assert.equal(typeof this.fakeService.now(), 'number');
+    assert.equal(this.fakeService.now(), now);
+  });
+
   test('it can reset date that was previously set', function(assert) {
     let done = assert.async();
     let now = Date.now();
