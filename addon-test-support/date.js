@@ -1,4 +1,4 @@
-import DateService from 'ember-date-service/services/date';
+import DateService from "ember-date-service/services/date";
 
 /**
  * @class FakeDateService
@@ -22,7 +22,9 @@ export default DateService.extend({
   },
 
   setNow(date = Date.now()) {
-    this._now = date;
+    this._now = date instanceof Date ? date.getTime() : date;
+
+    return this._now;
   },
 
   reset() {
