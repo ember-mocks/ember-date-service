@@ -1,3 +1,13 @@
+## v1.1.0 (2020-07-02)
+
+#### :rocket: Enhancement
+* [#147](https://github.com/ember-mocks/ember-date-service/pull/147) task: Enable passing Date instance to setNow ([@scalvert](https://github.com/scalvert))
+
+#### Committers: 2
+- Steve Calvert ([@scalvert](https://github.com/scalvert))
+- [@dependabot-preview[bot]](https://github.com/apps/dependabot-preview)
+
+
 ## v1.0.0 (2020-01-24)
 
 #### :boom: Breaking Change
