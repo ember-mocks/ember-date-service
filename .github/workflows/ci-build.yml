@@ -12,17 +12,9 @@ on:
 jobs:
   test:
     name: Tests
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest, macOS-latest]
+    runs-on: ubuntu-latest
 
     steps:
-      - if: matrix.os == 'macOS-latest'
-        run: |
-          brew update
-          brew cask install google-chrome
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
@@ -30,9 +22,9 @@ jobs:
       - name: install dependencies
         run: yarn install
       - name: lint
-        run: yarn lint:js
+        run: yarn lint
       - name: test
-        run: yarn test
+        run: yarn test:ember
 
   try-scenarios:
     name: ${{ matrix.ember-try-scenario }}
