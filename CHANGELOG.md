@@ -7,6 +7,15 @@
 - Steve Calvert ([@scalvert](https://github.com/scalvert))
 
 
+## v2.0.0 (2020-12-11)
+
+#### :boom: Breaking Change
+* [#153](https://github.com/ember-mocks/ember-date-service/pull/153) Updates blueprint using ember-cli-update to 3.22.0 ([@scalvert](https://github.com/scalvert))
+
+#### Committers: 1
+- Steve Calvert ([@scalvert](https://github.com/scalvert))
+
+
 ## v1.1.0 (2020-07-02)
 
 #### :rocket: Enhancement
