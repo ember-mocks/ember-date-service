@@ -17,7 +17,7 @@ This addon provides a minimal API to achieve the required functionality.
 
 ## Compatibility
 
-- Ember.js v2.18 or above
+- Ember.js v3.16 or above
 - Ember CLI v2.13 or above
 
 ## Installation
@@ -34,17 +34,20 @@ You can use the `DateService` by injecting it into your class:
 
 ```js
 // components/show-date.js
-import { inject as service } from "@ember/service";
+import { inject as service } from '@ember/service';
+import Component from '@glimmer/component';
+import { tracked } from '@glimmer/tracking';
 
-export default Component.extend({
-  date: service(),
+export default DateComponent extends Component {
+  @service date;
+  @tracked currentDate;
 
-  init() {
-    this._super(...arguments);
+  constructor() {
+    super(...arguments);
 
-    this.set("currentDate", this.get("date").now());
+    this.currentDate = this.date.now();
   }
-});
+}
 ```
 
 ### Test code
@@ -59,11 +62,11 @@ import { render } from "@ember/test-helpers";
 import hbs from "htmlbars-inline-precompile";
 import { setupFakeDateService } from "ember-date-service/test-support";
 
-module("Integration | Component | show-date", function(hooks) {
+module("Integration | Component | show-date", function (hooks) {
   setupRenderingTest(hooks);
   setupFakeDateService(hooks);
 
-  test("it renders", async function(assert) {
+  test("it renders", async function (assert) {
     // ...
   });
 });
@@ -80,11 +83,11 @@ import { render } from "@ember/test-helpers";
 import hbs from "htmlbars-inline-precompile";
 import { setupFakeDateService } from "ember-date-service/test-support";
 
-describe("Integration | Component | show-date", function() {
+describe("Integration | Component | show-date", function () {
   setupRenderingTest();
   setupFakeDateService();
 
-  it("renders", async function() {
+  it("renders", async function () {
     // ...
   });
 });
@@ -94,23 +97,23 @@ To set a static value for `now`, use the `setNow` function. This function will e
 
 ```js
 // tests/integration/show-date-test.js
-module("Integration | Component | show-date", function(hooks) {
+module("Integration | Component | show-date", function (hooks) {
   setupRenderingTest(hooks);
   setupFakeDateService(hooks);
 
-  test("it generates the current date", async function(assert) {
+  test("it generates the current date", async function (assert) {
     assert.expect(1);
 
     await render(hbs`
-      {{#show-date as |date|}}
+      <ShowDate as |date|>
         {{date}}
-      {{/show-date}}
+      </ShowDate>
     `);
 
     assert.ok(this.element.textContent.trim().match(/\d/));
   });
 
-  test("it generates a specific date", async function(assert) {
+  test("it generates a specific date", async function (assert) {
     assert.expect(1);
 
     let dateService = this.owner.lookup("service:date");
@@ -119,9 +122,9 @@ module("Integration | Component | show-date", function(hooks) {
     dateService.setNow(now);
 
     await render(hbs`
-      {{#show-date as |date|}}
+      <ShowDate as |date|>
         {{date}}
-      {{/show-date}}
+      </ShowDate>
     `);
 
     assert.equal(this.element.textContent.trim(), now);
@@ -133,11 +136,11 @@ To reset `now` to restore its behavior to the default `Date.now()` behavior, use
 
 ```js
 // tests/integration/show-date-test.js
-module("Integration | Component | show-date", function(hooks) {
+module("Integration | Component | show-date", function (hooks) {
   setupRenderingTest(hooks);
   setupFakeDateService(hooks);
 
-  test("it generates the current date", async function(assert) {
+  test("it generates the current date", async function (assert) {
     assert.expect(1);
 
     let dateService = this.owner.lookup("service:date");
@@ -146,9 +149,9 @@ module("Integration | Component | show-date", function(hooks) {
     dateService.setNow(now);
 
     await render(hbs`
-      {{#show-date as |date|}}
+      <ShowDate as |date|>
         {{date}}
-      {{/show-date}}
+      </ShowDate>
     `);
 
     assert.equal(this.element.textContent.trim(), now);
