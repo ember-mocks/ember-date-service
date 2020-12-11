@@ -1,6 +1,6 @@
 {
   "name": "ember-date-service",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "An Ember addon that provides a Date service with a minimal API.",
   "keywords": [
     "ember-addon"
@@ -72,7 +72,6 @@
       "bug": ":bug: Bug Fix",
       "documentation": ":memo: Documentation",
       "internal": ":house: Internal",
-      "checkup-task": ":bar_chart: Checkup Task",
       "generators": ":recycle: Generators"
     }
   },
@@ -93,7 +92,6 @@
     "github": {
       "release": true,
       "tokenRef": "GITHUB_AUTH"
-    },
-    "npm": false
+    }
   }
 }
