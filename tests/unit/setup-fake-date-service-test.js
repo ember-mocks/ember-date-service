@@ -11,7 +11,19 @@ module('Unit | Setup | setupFakeDateService', function(hooks) {
 
     assert.equal(typeof fakeDateService.setNow, 'function');
   });
+
+
+  test('it sets up the fake namespaced date service', function(assert) {
+    const namespacedService = this.owner.lookup('service:ember-date-service@date');
+
+    const date = new Date();
+
+    namespacedService.setNow(date)
+
+    assert.equal(namespacedService.now(), date.getTime());
+  });
 });
+
 
 module('Unit | setupFakeDateService not used', function(hooks) {
   setupTest(hooks);

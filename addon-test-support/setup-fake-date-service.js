@@ -8,5 +8,6 @@ import FakeDateService from './date';
 export default function setupFakeDateService(hooks = self) {
   hooks.beforeEach(function() {
     this.owner.register('service:date', FakeDateService);
+    this.owner.register('service:ember-date-service@date', FakeDateService);
   });
 }
