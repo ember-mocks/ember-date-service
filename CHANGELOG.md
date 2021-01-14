@@ -1,3 +1,12 @@
+## v2.1.0 (2021-01-14)
+
+#### :rocket: Enhancement
+* [#6](https://github.com/ember-mocks/ember-date-service/pull/6) [feature] allow namespacing for date service to work in tests ([@gabrielcsapo](https://github.com/gabrielcsapo))
+
+#### Committers: 1
+- Gabriel Csapo ([@gabrielcsapo](https://github.com/gabrielcsapo))
+
+
 ## v2.0.0 (2020-12-11)
 
 #### :boom: Breaking Change
