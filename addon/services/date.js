@@ -10,16 +10,16 @@ import Service from '@ember/service';
  * which allows you to override dates with static values without having to
  * modify the native Date object.
  */
-export default Service.extend({
+export default class DateService extends Service {
   now() {
     return Date.now();
-  },
+  }
 
   UTC(...args) {
     return new Date(Date.UTC(...args));
-  },
+  }
 
   parse(dateString) {
     return Date.parse(dateString);
-  },
-});
+  }
+}
