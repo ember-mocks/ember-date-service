@@ -54,6 +54,7 @@
     "@types/htmlbars-inline-precompile": "^3.0.0",
     "@types/qunit": "^2.11.3",
     "@types/rsvp": "^4.0.4",
+    "@typescript-eslint/parser": "^5.25.0",
     "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-cli": "~3.22.0",

@@ -45,5 +45,13 @@ module.exports = {
       plugins: ['node'],
       extends: ['plugin:node/recommended'],
     },
+    // TS files
+    {
+      files: ['**/*.ts'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        sourceType: 'module',
+      },
+    }
   ],
 };
