@@ -11,15 +11,15 @@ import Service from '@ember/service';
  * modify the native Date object.
  */
 export default class DateService extends Service {
-  now() {
+  now(): number {
     return Date.now();
   }
 
-  UTC(...args) {
+  UTC(...args: Parameters<DateConstructor['UTC']>): Date {
     return new Date(Date.UTC(...args));
   }
 
-  parse(dateString) {
+  parse(dateString: string) {
     return Date.parse(dateString);
   }
 }
