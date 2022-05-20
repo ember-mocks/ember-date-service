@@ -1,7 +1,7 @@
 import Application from '@ember/application';
 import Resolver from './resolver';
 import loadInitializers from 'ember-load-initializers';
-import config from 'dummy/config/environment';
+import config from 'test-app/config/environment';
 
 const App = Application.extend({
   modulePrefix: config.modulePrefix,

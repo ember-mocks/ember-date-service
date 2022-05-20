@@ -1,0 +1,54 @@
+{
+  "name": "ember-date-service",
+  "version": "2.1.0",
+  "description": "An Ember addon that provides a Date service with a minimal API.",
+  "keywords": [
+    "ember-addon"
+  ],
+  "repository": "https://github.com/scalvert/ember-date-service",
+  "license": "MIT",
+  "author": "scalvert <steve.calvert@gmail.com>",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "scripts": {
+    "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
+    "lint:js": "eslint ."
+  },
+  "dependencies": {
+    "ember-cli-babel": "^7.22.1"
+  },
+  "engines": {
+    "node": "10.* || >= 12.*"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "changelog": {
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "enhancement": ":rocket: Enhancement",
+      "bug": ":bug: Bug Fix",
+      "documentation": ":memo: Documentation",
+      "internal": ":house: Internal",
+      "generators": ":recycle: Generators"
+    }
+  },
+  "release-it": {
+    "plugins": {
+      "release-it-lerna-changelog": {
+        "infile": "CHANGELOG.md",
+        "launchEditor": true
+      }
+    },
+    "git": {
+      "tagName": "v${version}",
+      "changelog": "git log --pretty=format:\"* %s (%h)\" --no-merges --perl-regexp --author=\"^((?!dependabot-preview).*)$\" ${latestTag}...HEAD"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
+  }
+}

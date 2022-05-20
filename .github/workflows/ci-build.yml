@@ -21,10 +21,15 @@ jobs:
           node-version: 10.x
       - name: install dependencies
         run: yarn install
-      - name: lint
+      - name: lint addon
         run: yarn lint
+        working-directory: addon
+      - name: lint test-app
+        run: yarn lint
+        working-directory: test-app
       - name: test
         run: yarn test:ember
+        working-directory: test-app
 
   try-scenarios:
     name: ${{ matrix.ember-try-scenario }}
@@ -54,3 +59,4 @@ jobs:
         run: yarn install
       - name: test
         run: node_modules/.bin/ember try:one ${{ matrix.ember-try-scenario }}
+        working-directory: test-app
