@@ -19,7 +19,7 @@ export default class DateService extends Service {
     return new Date(Date.UTC(...args));
   }
 
-  parse(dateString: string) {
+  parse(dateString: string): number {
     return Date.parse(dateString);
   }
 }
