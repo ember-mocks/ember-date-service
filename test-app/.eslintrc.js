@@ -27,11 +27,7 @@ module.exports = {
         'blueprints/*/index.js',
         'config/**/*.js',
       ],
-      excludedFiles: [
-        'addon/**',
-        'addon-test-support/**',
-        'app/**',
-      ],
+      excludedFiles: [],
       parserOptions: {
         sourceType: 'script',
         ecmaVersion: 2015,

@@ -13,14 +13,14 @@
     "test": "tests"
   },
   "scripts": {
+    "build": "rollup --config",
+    "prepublishOnly": "rollup --config",
+    "start": "rollup --config --watch",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
     "lint:js": "eslint ."
   },
-  "dependencies": {
-    "ember-cli-babel": "^7.22.1"
-  },
   "engines": {
-    "node": "10.* || >= 12.*"
+    "node": ">= 14.*"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
@@ -49,6 +49,35 @@
     "github": {
       "release": true,
       "tokenRef": "GITHUB_AUTH"
+    }
+  },
+  "dependencies": {
+    "@embroider/addon-shim": "^1.6.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.0",
+    "@babel/plugin-proposal-class-properties": "^7.17.12",
+    "@babel/plugin-proposal-decorators": "^7.17.12",
+    "@embroider/addon-dev": "^1.6.0",
+    "@rollup/plugin-babel": "^5.3.1",
+    "rollup": "^2.74.1"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./*": "./dist/*",
+    "./test-support": "./dist/test-support/index.js",
+    "./addon-main.js": "./addon-main.js"
+  },
+  "files": [
+    "addon-main.js",
+    "dist"
+  ],
+  "ember-addon": {
+    "main": "addon-main.js",
+    "type": "addon",
+    "version": 2,
+    "app-js": {
+      "./services/date.js": "./dist/_app_/services/date.js"
     }
   }
 }
