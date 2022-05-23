@@ -87,5 +87,8 @@
       "release": true,
       "tokenRef": "GITHUB_AUTH"
     }
+  },
+  "ember": {
+    "edition": "octane"
   }
 }
