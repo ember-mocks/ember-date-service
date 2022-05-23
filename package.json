@@ -3,5 +3,9 @@
   "workspaces": [
     "addon",
     "test-app"
-  ]
+  ],
+  "scripts": {
+    "lint": "yarn workspaces run lint",
+    "test": "yarn workspaces run test"
+  }
 }
