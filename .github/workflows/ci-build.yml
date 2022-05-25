@@ -60,6 +60,9 @@ jobs:
           node-version: 14.x
       - name: install dependencies
         run: yarn install
+      - name: build addon
+        run: yarn build
+        working-directory: addon
       - name: test
         run: node_modules/.bin/ember try:one ${{ matrix.ember-try-scenario }}
         working-directory: test-app
