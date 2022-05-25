@@ -27,6 +27,9 @@ jobs:
       - name: lint test-app
         run: yarn lint
         working-directory: test-app
+      - name: build addon
+        run: yarn build
+        working-directory: addon
       - name: test
         run: yarn test:ember
         working-directory: test-app
