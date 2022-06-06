@@ -19,11 +19,11 @@
     "test:ember-compatibility": "ember try:each"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.18.2",
     "@ember/optional-features": "^2.0.0",
     "@ember/test-helpers": "^2.8.1",
     "@glimmer/component": "^1.0.2",
     "@glimmer/tracking": "^1.0.2",
-    "babel-eslint": "^10.1.0",
     "broccoli-asset-rev": "^3.0.0",
     "ember-auto-import": "^2.4.1",
     "ember-cli": "^3.28.0",
@@ -59,7 +59,7 @@
     "webpack": "5"
   },
   "engines": {
-    "node": "10.* || >= 12.*"
+    "node": ">= 14.*"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"

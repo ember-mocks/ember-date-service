@@ -1,9 +1,10 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
+    requireConfigFile: false,
     ecmaFeatures: {
       legacyDecorators: true,
     },
@@ -24,9 +25,7 @@ module.exports = {
         'addon-main.js',
         'blueprints/*/index.js',
       ],
-      excludedFiles: [
-        'addon/**',
-      ],
+      excludedFiles: [],
       parserOptions: {
         sourceType: 'script',
         ecmaVersion: 2015,
