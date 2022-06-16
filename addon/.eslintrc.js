@@ -1,9 +1,10 @@
 module.exports = {
   root: true,
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
+    requireConfigFile: false,
     ecmaFeatures: {
       legacyDecorators: true,
     },
@@ -21,19 +22,10 @@ module.exports = {
         '.eslintrc.js',
         '.prettierrc.js',
         '.template-lintrc.js',
-        'ember-cli-build.js',
-        'index.js',
-        'testem.js',
+        'addon-main.js',
         'blueprints/*/index.js',
-        'config/**/*.js',
-        'tests/dummy/config/**/*.js',
       ],
-      excludedFiles: [
-        'addon/**',
-        'addon-test-support/**',
-        'app/**',
-        'tests/dummy/app/**',
-      ],
+      excludedFiles: [],
       parserOptions: {
         sourceType: 'script',
         ecmaVersion: 2015,
