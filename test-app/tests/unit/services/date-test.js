@@ -18,4 +18,10 @@ module('Unit | Service | date', function(hooks) {
     assert.ok(date);
     assert.equal(date.toUTCString(), 'Sat, 23 Jan 1971 03:04:05 GMT');
   });
+
+  test('it returns a date from the parse method', function(assert) {
+    let date = this.service.parse('04 Dec 1995 00:12:00 GMT');
+
+    assert.equal(date, 818035920000);
+  });
 });
