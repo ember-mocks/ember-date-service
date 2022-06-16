@@ -1,5 +1,6 @@
 import babel from '@rollup/plugin-babel';
 import { Addon } from '@embroider/addon-dev/rollup';
+import typescript from '@rollup/plugin-typescript';
 
 const addon = new Addon({
   srcDir: 'src',
@@ -15,7 +16,7 @@ export default {
     // These are the modules that users should be able to import from your
     // addon. Anything not listed here may get optimized away.
     addon.publicEntrypoints([
-      'services/**/*.js',
+      'services/**/*.ts',
       'test-support/index.js',
       ]),
 
@@ -25,6 +26,8 @@ export default {
     addon.appReexports([
       'services/**/*.js'
     ]),
+
+    typescript(),
 
     // This babel config should *not* apply presets or compile away ES modules.
     // It exists only to provide development niceties for you, like automatic
