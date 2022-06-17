@@ -14,6 +14,7 @@
   },
   "scripts": {
     "build": "rollup --config",
+    "prepare": "yarn build",
     "prepublishOnly": "rollup --config",
     "start": "rollup --config --watch",
     "lint": "npm-run-all --aggregate-output --continue-on-error --parallel lint:*",
@@ -25,16 +26,6 @@
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
   },
-  "changelog": {
-    "labels": {
-      "breaking": ":boom: Breaking Change",
-      "enhancement": ":rocket: Enhancement",
-      "bug": ":bug: Bug Fix",
-      "documentation": ":memo: Documentation",
-      "internal": ":house: Internal",
-      "generators": ":recycle: Generators"
-    }
-  },
   "release-it": {
     "plugins": {
       "release-it-lerna-changelog": {
@@ -43,8 +34,7 @@
       }
     },
     "git": {
-      "tagName": "v${version}",
-      "changelog": "git log --pretty=format:\"* %s (%h)\" --no-merges --perl-regexp --author=\"^((?!dependabot-preview).*)$\" ${latestTag}...HEAD"
+      "tagName": "v${version}"
     },
     "github": {
       "release": true,
