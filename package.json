@@ -1,5 +1,6 @@
 {
   "private": true,
+  "repository": "https://github.com/scalvert/ember-date-service",
   "workspaces": [
     "addon",
     "test-app"
@@ -10,7 +11,7 @@
     "test": "yarn workspace test-app ember test"
   },
   "devDependencies": {
-    "release-it": "^15.0.0",
+    "release-it": "^14.7.0",
     "release-it-lerna-changelog": "^4.0.1",
     "release-it-yarn-workspaces": "^2.0.1"
   },
