@@ -1,3 +1,24 @@
+
+## v3.0.0 (2022-06-17)
+
+#### :boom: Breaking Change
+* [#174](https://github.com/ember-mocks/ember-date-service/pull/174) Convert this addon to v2 format ([@nlfurniss](https://github.com/nlfurniss))
+
+#### :rocket: Enhancement
+* [#157](https://github.com/ember-mocks/ember-date-service/pull/157) Convert to native classes ([@chriskrycho](https://github.com/chriskrycho))
+
+#### :house: Internal
+* [#177](https://github.com/ember-mocks/ember-date-service/pull/177) Fixing release-it configuration ([@scalvert](https://github.com/scalvert))
+* [#176](https://github.com/ember-mocks/ember-date-service/pull/176) Run ember-cli-update ([@nlfurniss](https://github.com/nlfurniss))
+* [#175](https://github.com/ember-mocks/ember-date-service/pull/175) Convert to typesript ([@nlfurniss](https://github.com/nlfurniss))
+* [#158](https://github.com/ember-mocks/ember-date-service/pull/158) Move ember-cli-htmlbars from dep to devDep ([@nlfurniss](https://github.com/nlfurniss))
+
+#### Committers: 3
+- Chris Krycho ([@chriskrycho](https://github.com/chriskrycho))
+- Nathaniel Furniss ([@nlfurniss](https://github.com/nlfurniss))
+- Steve Calvert ([@scalvert](https://github.com/scalvert))
+
+
 ## v2.1.0 (2021-01-14)
 
 #### :rocket: Enhancement
