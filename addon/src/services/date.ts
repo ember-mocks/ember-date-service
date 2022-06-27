@@ -23,3 +23,9 @@ export default class DateService extends Service {
     return Date.parse(dateString);
   }
 }
+
+declare module '@ember/service' {
+  interface Registry {
+    'date': DateService;
+  }
+}
