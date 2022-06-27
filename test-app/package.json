@@ -1,7 +1,7 @@
 {
   "name": "test-app",
   "private": true,
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "An Ember addon that provides a Date service with a minimal API.",
   "repository": "https://github.com/scalvert/ember-date-service",
   "license": "MIT",
@@ -34,7 +34,7 @@
     "ember-cli-inject-live-reload": "^2.0.2",
     "ember-cli-sri": "^2.1.1",
     "ember-cli-terser": "^4.0.0",
-    "ember-date-service": "3.0.0",
+    "ember-date-service": "3.0.1",
     "ember-disable-prototype-extensions": "^1.1.3",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^2.1.1",

@@ -1,4 +1,14 @@
 
+
+## v3.0.1 (2022-06-27)
+
+#### :bug: Bug Fix
+* [#178](https://github.com/ember-mocks/ember-date-service/pull/178) Add service declaration ([@nlfurniss](https://github.com/nlfurniss))
+
+#### Committers: 1
+- Nathaniel Furniss ([@nlfurniss](https://github.com/nlfurniss))
+
+
 ## v3.0.0 (2022-06-17)
 
 #### :boom: Breaking Change
